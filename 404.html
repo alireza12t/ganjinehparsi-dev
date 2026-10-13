@@ -3,36 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" type="image/png" href="/assets/favicon.png">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<meta name="theme-color" content="#17244a">
-<meta property="og:site_name" content="Ganjineh · گنجینه">
-<meta property="og:image" content="https://ganjinehparsi.com/assets/og.jpg">
-<meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Playfair+Display:wght@600&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
-<script src="/assets/app.js" defer></script>
 <title>گنجینه · Ganjineh</title>
 <meta name="description" content="گنجینهٔ شعر پارسی · The treasury of Persian poetry">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0d1630">
+<meta property="og:site_name" content="Ganjineh · گنجینه">
 <meta property="og:title" content="گنجینه · Ganjineh">
+<meta property="og:description" content="گنجینهٔ شعر پارسی · The treasury of Persian poetry">
+<meta property="og:image" content="https://ganjinehparsi.com/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&family=Playfair+Display:wght@600&family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/app.js" defer></script>
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="/"><img src="/assets/apple-touch-icon.png" alt=""><span class="fa">گنجینه</span><span class="en">GANJINEH</span></a>
-  <a href="#" class="lang-toggle" data-lang-toggle>English</a>
+  <div class="wrap top-inner">
+    <a class="brand" href="/"><img src="/assets/apple-touch-icon.png" alt=""><span class="fa">گنجینه</span><span class="en">GANJINEH</span></a>
+    <nav class="nav" data-nav>
+      <a href="/#features"><span class="only-fa">ویژگی‌ها</span><span class="only-en">Features</span></a>
+      <a href="/#screens"><span class="only-fa">تصویرها</span><span class="only-en">Screenshots</span></a>
+      <a href="/#download"><span class="only-fa">دریافت</span><span class="only-en">Download</span></a>
+      <a href="/about"><span class="only-fa">درباره</span><span class="only-en">About</span></a>
+      <a href="/support"><span class="only-fa">پشتیبانی</span><span class="only-en">Support</span></a>
+    </nav>
+    <button class="menu-btn" data-menu aria-label="Menu">☰</button>
+    <a href="#" class="lang-toggle" data-lang-toggle>English</a>
+  </div>
 </header>
-<div class="border-band"></div>
 <main class="poem-page carpet">
   <div class="wrap" data-route></div>
 </main>
 <div class="border-band"></div>
-<footer>
-  <div class="wrap">
-    <p><span class="only-fa">متن‌ها، معنی بیت‌ها و خوانش‌ها از <a href="https://ganjoor.net">گنجور</a>، کتابخانهٔ آزاد شعر فارسی. گنجینه برنامه‌ای مستقل است و وابسته به گنجور نیست.</span><span class="only-en">Poems, couplet meanings and recitations come from <a href="https://ganjoor.net">Ganjoor</a>, the free library of Persian poetry. Ganjineh is independent and not affiliated with Ganjoor.</span></p>
-    <p>© 2026 Ganjineh · گنجینه</p>
-  </div>
-</footer>
+<footer data-footer></footer>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["58WM5RF23G.com.alirezatoghiani.ganjineh"],
+        "components": [
+          { "/": "/poem/*", "comment": "A poem, optionally ?bayt=N for a couplet" },
+          { "/": "/poet/*" },
+          { "/": "/book/*" },
+          { "/": "/today" },
+          { "/": "/fal" },
+          { "/": "/search", "?": { "q": "*" } }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["58WM5RF23G.com.alirezatoghiani.ganjineh"]
+  }
+}

@@ -5,9 +5,9 @@
 // ---- Links: change them here and every page follows. An empty link hides its buttons' target
 // (they fall back to the download section) or, for the donation chip, hides it. ----
 const LINKS = {
-  appStore: "https://apps.apple.com/app/id6822480269",
+  appStore: "https://apps.apple.com/us/app/ganjineh/id6822480269",
   macAppStore: "",  // same listing (universal purchase); leave empty to reuse appStore
-  dmg: "",          // direct Mac download, e.g. "https://github.com/alireza12t/ganjinehparsi.com/releases/latest/download/Ganjineh.dmg"
+  dmg: "https://github.com/alireza12t/ganjinehparsi.com/releases/latest/download/Ganjineh.dmg",
   donate: "",       // your donation page
   website: "https://alireza12t.github.io",
   linktree: "https://alireza12t.github.io/links/",

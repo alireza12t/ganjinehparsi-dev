@@ -172,7 +172,7 @@ DONATE = page(
         both("به گنجینه امتیاز دهید", "Rate Ganjineh", "h2"),
         both("یک امتیاز یا نقد کوتاه در اپ‌استور به دیگران کمک می‌کند گنجینه را پیدا کنند.",
              "A rating or short review on the App Store helps others discover Ganjineh."),
-        '<p><a class="badge" data-link="appStore" href="https://apps.apple.com/app/id6822480269"><img src="/assets/download-on-the-app-store.svg" alt="App Store" style="height:46px"></a></p>',
+        '<p><a class="badge" data-link="appStore" href="https://apps.apple.com/us/app/ganjineh/id6822480269"><img src="/assets/download-on-the-app-store.svg" alt="App Store" style="height:46px"></a></p>',
         both("با دوستانتان همرسانی کنید", "Share it with friends", "h2"),
         both("بیتی را از گنجینه برای کسی بفرستید، یا نشانی ganjinehparsi.com را با دوستداران شعر در میان بگذارید.",
              "Send someone a couplet from Ganjineh, or share ganjinehparsi.com with fellow poetry lovers."),

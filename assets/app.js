@@ -158,6 +158,33 @@ async function renderSearch(root, term) {
     ${openAppBar(`${APP_SCHEME}search?q=${encodeURIComponent(term)}`, esc(term))}`;
 }
 
+/** A shared collection: /c?n=name&i=2130.4,2131 (poem, or poem.couplet 1-based). */
+async function renderCollection(root, name, items) {
+  const entries = items.split(",").map((s) => s.split(".").map((n) => parseInt(n, 10))).filter(([id]) => id > 0).slice(0, 200);
+  document.title = `${name || "گزیده"} — گنجینه`;
+  const cards = await Promise.all(entries.map(async ([id, bayt]) => {
+    try {
+      const poem = await getJSON(`${API}/poem/${id}?catInfo=true&verseDetails=true`);
+      const lines = couplets(poem.verses ?? []);
+      const line = bayt ? lines.find((l) => l.index === bayt - 1) : lines[0];
+      const poet = poem.category?.poet?.nickname || (poem.fullTitle || "").split("»")[0].trim();
+      const href = `/poem/${id}${bayt ? `?bayt=${bayt}` : ""}`;
+      return `<a class="beyt" href="${href}" style="text-decoration:none;color:inherit;display:block">
+          ${(line?.verses ?? []).map((v) => `<span style="display:block;text-align:center">${esc(v.text)}</span>`).join("")}
+          <span style="display:block;text-align:center;font-size:14px;color:var(--gold)">${esc(poet)} · ${esc(poem.title)}</span>
+        </a>`;
+    } catch { return ""; }
+  }));
+  root.innerHTML = `
+    <article class="poem-card">
+      <header class="poem-head"><div class="poet">گزیده</div><h1>${esc(name || "گزیدهٔ همرسانی‌شده")}</h1>
+      <div class="meta">${faDigits(entries.length)} شعر و بیت</div></header>
+      <div class="ornament"></div>
+      <div class="verses">${cards.join('<div class="ornament" style="width:80px;margin:14px auto"></div>')}</div>
+    </article>
+    ${openAppBar(`${APP_SCHEME}c?n=${encodeURIComponent(name)}&i=${encodeURIComponent(items)}`, esc(name || "گزیده"))}`;
+}
+
 async function route() {
   const root = document.querySelector("[data-route]");
   if (!root) return;
@@ -176,6 +203,7 @@ async function route() {
       return await renderPoem(root, fal.id, null);
     }
     if (kind === "search" && query.get("q")) return await renderSearch(root, query.get("q"));
+    if (kind === "c" && query.get("i")) return await renderCollection(root, query.get("n") || "", query.get("i"));
     root.innerHTML = `<article class="poem-card"><header class="poem-head"><h1>این صفحه پیدا نشد</h1><div class="meta">Page not found</div></header><p style="text-align:center"><a class="btn btn-gold" href="/">صفحهٔ اصلی</a></p></article>`;
   } catch {
     root.innerHTML = `<p class="loading">گنجور پاسخ نداد. کمی بعد دوباره امتحان کنید.</p>`;

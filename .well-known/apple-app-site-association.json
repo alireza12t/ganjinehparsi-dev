@@ -9,7 +9,8 @@
           { "/": "/book/*" },
           { "/": "/today" },
           { "/": "/fal" },
-          { "/": "/search", "?": { "q": "*" } }
+          { "/": "/search", "?": { "q": "*" } },
+          { "/": "/c", "comment": "A shared collection: ?n=name&i=2130.4,2131" }
         ]
       }
     ]

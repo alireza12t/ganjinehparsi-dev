@@ -140,7 +140,7 @@ SUPPORT = page(
 
 ABOUT = page(
     "دربارهٔ گنجینه", "About Ganjineh",
-    "گنجینهٔ شعر پارسی، با جامهٔ فرش و کاشی", "The treasury of Persian poetry, dressed in carpet and tile",
+    "گنجینه‌ی شعر پارسی، با جامهٔ فرش و کاشی", "The treasury of Persian poetry, dressed in carpet and tile",
     "\n".join([
         both("گنجینه برای کسانی است که شعر پارسی را دوست دارند و می‌خواهند آن را زیبا، آرام و بی‌مزاحمت بخوانند و بشنوند — در آیفون، آیپد، مک و اپل‌واچ.",
              "Ganjineh is for anyone who loves Persian poetry and wants to read and hear it beautifully, calmly and without distraction — on iPhone, iPad, Mac and Apple Watch."),
@@ -194,7 +194,7 @@ PAGES = {
     "support.html": ("پشتیبانی · Support — گنجینه", "Help, contact and frequently asked questions for Ganjineh.", "https://ganjinehparsi.com/support", SUPPORT),
     "about.html": ("درباره · About — گنجینه", "About Ganjineh, the treasury of Persian poetry for iPhone, iPad, Mac and Apple Watch.", "https://ganjinehparsi.com/about", ABOUT),
     "donate.html": ("حمایت از گنجینه · Support Ganjineh", "Ways to support Ganjineh, the free and ad-free Persian poetry app.", "https://ganjinehparsi.com/donate", DONATE),
-    "404.html": ("گنجینه · Ganjineh", "گنجینهٔ شعر پارسی · The treasury of Persian poetry", None, LINK_PAGE),
+    "404.html": ("گنجینه · Ganjineh", "گنجینه‌ی شعر پارسی · The treasury of Persian poetry", None, LINK_PAGE),
 }
 
 for name, (title, description, canonical, body) in PAGES.items():

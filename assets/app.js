@@ -240,7 +240,7 @@ function footer() {
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><img src="/assets/apple-touch-icon.png" alt=""><span>گنجینه</span></div>
-        <p class="only-fa">گنجینهٔ شعر پارسی برای آیفون، آیپد، مک و اپل‌واچ.</p>
+        <p class="only-fa">گنجینه‌ی شعر پارسی برای آیفون، آیپد، مک و اپل‌واچ.</p>
         <p class="only-en">The treasury of Persian poetry for iPhone, iPad, Mac and Apple Watch.</p>
       </div>
       <div>
